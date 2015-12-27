@@ -36,6 +36,9 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'south',
+    'person',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -62,6 +65,10 @@ DATABASES = {
     }
 }
 
+SOUTH_DATABASE_ADAPTERS = {
+    'default':'south.db.sqlite3'
+}
+
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
 
@@ -75,8 +82,27 @@ USE_L10N = True
 
 USE_TZ = True
 
+# Media files
+
+MEDIA_ROOT = os.path.join(BASE_DIR, '..', 'uploads')
+
+MEDIA_URL = '/uploads/'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'assets'),
+)
+
+TEMPLATE_DIRS = (
+    os.path.join(BASE_DIR, 'templates'),
+)
+
+SOUTH_TESTS_MIGRATE = False
+
+FIXTURE_DIRS = (BASE_DIR, 'fixtures')
