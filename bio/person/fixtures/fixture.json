@@ -1,0 +1,15 @@
+[
+  {
+    "pk": 1,
+    "model": "bio.person",
+    "fields": {
+      "first_name": "Alexander",
+      "last_name": "Klekha",
+      "other_contact": "phone: +380672454410",
+      "jabber": "klekha-a@khavr.com",
+      "date_of_birth": "1984-04-13",
+      "skype": "alexander.klekha",
+      "email": "alexander.klekha@gmail.com"
+    }
+  },
+]
