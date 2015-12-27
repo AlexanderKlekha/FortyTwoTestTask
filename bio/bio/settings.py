@@ -66,7 +66,7 @@ DATABASES = {
 }
 
 SOUTH_DATABASE_ADAPTERS = {
-    'default':'south.db.sqlite3'
+    'default': 'south.db.sqlite3'
 }
 
 # Internationalization

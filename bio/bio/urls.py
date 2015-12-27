@@ -5,10 +5,6 @@ from person.views import PersonIndexView
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'bio.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
-
-    url(r'^admin/', include(admin.site.urls)),
-    url(r'^$', PersonIndexView.as_view(), name='index'),
-)
+                       url(r'^admin/', include(admin.site.urls)),
+                       url(r'^$', PersonIndexView.as_view(), name='index'),
+                       )
