@@ -104,5 +104,3 @@ TEMPLATE_DIRS = (
 )
 
 SOUTH_TESTS_MIGRATE = False
-
-FIXTURE_DIRS = (BASE_DIR, 'fixtures')
