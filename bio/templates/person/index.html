@@ -1,0 +1,31 @@
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'bio/style.css' %}"/>
+    <div class="page">
+    <h1>42 Coffee Cups Test Assignment</h1>
+    {% for person in object_list %}
+        <div class="content" >
+            <div class="main_blocks">
+                <div class="in_blocks">
+                    <br>
+                    <p>Name: {{ person.first_name }}</p>
+                    <p>Last Name: {{ person.last_name }}</p>
+                    <p>Date of birth: {{ person.date_of_birth }} </p>
+                </div>
+                <div class="in_block">
+                    <p>Bio: </p>
+                    <div>{{ person.bio_descr }}</div>
+                </div>
+            </div>
+            <div class="main_blocks">
+                <p>Contacts</p>
+                <p>E-mail: {{ person.email }}</p>
+                <p>Jabber: {{ person.jabber }}</p>
+                <p>Skype: {{ person.skype }}</p>
+                <p>Other contacts: </p>
+                <div>{{ person.other_contact }}</div>
+            </div>
+        </div>
+        <br>
+    {% endfor %}
+    </div>
+
